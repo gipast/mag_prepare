@@ -22,3 +22,20 @@ toc::[]
 ----
 include::mag_prog1.c[]
 ----
+
+=== Прога на С 2 вариант
+
+Поиск количества цифр, которые не встречются во второй строке, без повторений
+
+
+
+  tim@tim-Lenovo:c_prog$ cc mag_prog2.c
+  tim@tim-Lenovo:c_prog$ ./a.out
+  line1 a   11 22 33 44 55 666 000    d
+  line2 asdfgh 123
+  res = 4
+
+[source,c]
+----
+include::mag_prog2.c[]
+----
