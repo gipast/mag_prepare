@@ -1,0 +1,24 @@
+:notitle:
+:author: Чикичев Тимур Вадимович
+:email: timur7002007@gmail.com
+:source-highlighter: pygments
+:pygments-style: monokai
+:stem: latexmath
+
+:toc-title: Содержание отчета
+
+:counter: image-counter: 0
+
+toc::[]
+
+== Задание
+
+
+// <<<
+
+=== Прога на С 1 вариант
+
+[source,c]
+----
+include::mag_prog1.c[]
+----
