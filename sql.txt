@@ -1,0 +1,43 @@
+SELECT * FROM Customers
+ORDER BY Country ASC, CustomerName DESC; 
+
+
+SELECT * FROM Products Where (Price - (select avg(price) from Products)) between -5 and 5;
+
+
+
+SELECT column_name(s)
+FROM table1
+INNER JOIN table2
+ON table1.column_name = table2.column_name;
+
+
+SELECT Orders.OrderID, Customers.CustomerName, Shippers.ShipperName
+FROM ((Orders
+INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID)
+INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID); 
+
+SELECT column_name(s)
+FROM table_name AS alias_name;
+
+SELECT column_name AS alias_name
+FROM table_name;
+
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+ORDER BY column_name(s); 
+
+
+SELECT Shippers.ShipperName, COUNT(Orders.OrderID) AS NumberOfOrders FROM Orders
+LEFT JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID
+GROUP BY ShipperName;
+
+
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+HAVING condition
+ORDER BY column_name(s);
