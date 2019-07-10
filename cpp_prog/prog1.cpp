@@ -20,7 +20,7 @@ Point::Point(int _x, int _y): x(_x), y(_y) {};
 
 class Triangle{
   Point A, B, C;
-public:
+protected:
   Triangle(){};
   Triangle(Point _A, Point _B, Point _C):A(_A), B(_B), C(_C) {};
 
