@@ -1,10 +1,11 @@
 #include <stdio.h>
 
-int is_num(char c){
-  return ((c >= '0') && (c <= '9'));
-}
+//check char is number
+#define IS_NUM(c) ((c >= '0') && (c <= '9'))
 
-int myfunk(char *line1, char *line2){
+// #define GET_CHAR_FLAG(array_p, ch_p) array_p[ch_p - '0']
+
+int myfunk(const char *line1, const char *line2){
   int cnt = 0;
   int i, j;
   char c;
@@ -18,15 +19,16 @@ int myfunk(char *line1, char *line2){
 
   i = 0;
   while (line2[i] != '\0'){
-    if (is_num(line2[i]))
+    if (IS_NUM(line2[i]))
       exists[line2[i] - '0'] = 1;
+      // GET_CHAR_FLAG(exists, line2[i]) = 1;
     i++;
   }
   i = 0;
   while (line1[i] != '\0'){
     c = line1[i];
-    if (is_num(c)){
-      if (exists[c - '0'] == 0){
+    if (IS_NUM(c)){
+      if (!exists[c - '0']){
         exists[c - '0'] = 255;
         cnt++;
       }
